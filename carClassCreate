@@ -1,0 +1,32 @@
+//
+// L33S01 - Classes, Objects, and Prototypes --> with my updates
+//
+
+var car= Class.create();
+car.prototype = {
+    initialize: function() {
+      this.make = '';
+      this.model  = '';
+    },
+
+    setMake : function(str) {
+      this.make = str;
+    },
+
+    setModel : function(str) {
+      this.model = str;
+    },
+
+    getDisplayMakenModel : function() {
+      return this.make + ' ' + this.model;
+    },
+
+    type: car
+};
+
+var myCar = new car();
+myCar.setMake('Ford');
+myCar.setModel('Mustang')
+gs.info('car=' + myCar.make + ' ' + myCar.model); // Not advised
+var name = myCar.getDisplayMakenModel();
+gs.info(name);
