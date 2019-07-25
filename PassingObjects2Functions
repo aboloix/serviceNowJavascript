@@ -12,14 +12,13 @@ car.prototype = {
       gs.info('object=' + JSON.stringify(obj, null, 4));
     },
 
-    type: 'item'
+    type: 'car'
 };
 
-var myObj = {
-  "type"   : "vehicle",
-  "engine" : true,
-  "wheels" : 4,
-  "state"  : "allocated"
+var carObj = {
+  "make"   : "Ford",
+  "model" : "Mustang GT",
+  "engine" : "V8"
 };
-var myItem = new item();
-myItem.debugObject(myObj); // Loosely coupled
+var myCar = new car();
+myCar.debugObject(carObj); // Loosely coupled
