@@ -1,0 +1,24 @@
+//
+// L30S01 - Stringify and Parse
+//
+var carList = [
+  {
+    "make" : "Porsche",
+    "model" : "911"
+  },
+  {
+    "make" : "Jeep",
+    "model" : "Wrangler Unlimited"
+  },
+  {
+    "make" : "Toyota",
+    "model" : "Tacoma"
+  }
+];
+gs.info(carList); // That's not very helpful!
+
+var carListStr = JSON.stringify(carList);
+gs.info(carListStr);  // I can read it - sort of
+
+var carListStrFormat = JSON.stringify(carList, null, 4);
+gs.info(carListStrFormat); // Ah - that's better!
